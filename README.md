@@ -23,9 +23,13 @@ message payload {
 
 ### 2.1、proto.Message -> Message
 
-> message := Marshal(msg) // proto.Message -> Message
-> buf := Unmarshal(message) // Message -> []byte
-> message := Sink(buf) // []byte -> Message
+```golang
+message := Marshal(msg) // proto.Message -> Message
+
+buf := Unmarshal(message) // Message -> []byte
+
+message := Sink(buf) // []byte -> Message
+```
 
 ### 2.2、Get方法
 
