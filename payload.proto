@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package  protojson;
+option  go_package ="./smartpb";
+
+// 消息载体
+message payload {
+  bytes pmd = 1;  // proto message desc
+  bytes data = 2; // message 内容
+}
